@@ -1,0 +1,231 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    transition: all .5s;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+    border: none;
+}
+:root{
+    --background: #ebf2fa;
+    --buttom: #6356e4;
+    --heading_color: #373330;
+    --p_color: rgb(97, 96, 96);
+    --navbar_color:#6356e4;
+    --contrast_color: #f2f6f7;
+    --box_shadow: 2px 2px 5px #a6b4c8;
+                    /* -3px -3px 5px #ffffff; */
+}
+
+/* ------------------nav bar--------------- */
+nav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: var(--navbar_color);
+    padding: 10px 100px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: var(--box_shadow);
+}
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+nav ul li{
+    padding: 10px 0;
+    position: relative;
+}
+nav ul li::before{
+    content: "";
+    width: 100%;
+    left: 0;
+    bottom: -17px;
+    border-bottom: 2px solid var(--contrast_color);
+    z-index: 100;
+}
+nav ul li .active{
+    color: var(--contrast_color);
+    text-transform: uppercase;
+    opacity: 1;
+    padding: 20px;
+}
+nav ul li a{
+    color: var(--contrast_color);
+    text-transform: uppercase;
+    opacity: .6;
+    padding: 20px;
+}
+nav ul li a:hover{
+    background: var(--navbar_color);
+    opacity: 1;
+}
+
+nav .profile{
+    align-items: center;
+}
+nav .profile a{
+    color: var(--contrast_color);
+}
+/* -----------container-------------- */
+
+.container{
+    background: var(--background);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+.container .row{
+    margin: 0 13%;
+    padding-top: 90px;
+}
+/* ------------Order box---------------- */
+.order_box{
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    box-shadow: var(--box_shadow);
+}
+.order_box .box form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.order_box .box form .input_box{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.order_box .box form .input_box input{
+    width: 85%;
+    border: 1px solid var(--p_color);
+    padding: 15px;
+    border-radius: 3px;
+}
+.order_box .box form .btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 1100px;
+    margin-top: 20px;
+}
+.order_box .box form .btn button{
+    padding: 15px;
+    background: var(--buttom);border-radius: 3px;
+    color: var(--contrast_color);
+}
+.order_box .box form .btn button:hover{
+    background: #0e084f;
+}
+
+/* ------------Menu section------------ */
+.menu_box{
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    box-shadow: var(--box_shadow);
+}
+.menu_box .item_box form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.menu_box .item_box form .box_input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;;
+}
+.menu_box .item_box form .box_input input{
+    width: 85%;
+    border: 1px solid var(--p_color);
+    padding: 15px;
+    border-radius: 3px;
+}
+.menu_box .item_box form .but{
+    display: flex;
+    justify-content: flex-end;
+    width: 1100px;
+    margin-top: 20px;
+}
+.menu_box .item_box form .but button{
+    padding: 15px;
+    background: var(--buttom);border-radius: 3px;
+    color: var(--contrast_color);
+}
+.menu_box .item_box form .but button:hover{
+    background: #0e084f;
+}
+
+
+/* ------------Employee section-------------- */
+.emploee_box{
+    background: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    box-shadow: var(--box_shadow);
+}
+.emploee_box .employee_item form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.emploee_box .employee_item form .emp_input{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;;
+}
+.emploee_box .employee_item form .emp_input input{
+    width: 85%;
+    border: 1px solid var(--p_color);
+    padding: 15px;
+    border-radius: 3px;
+}
+.emploee_box .employee_item form .btn{
+    display: flex;
+    justify-content: flex-end;
+    width: 1100px;
+    margin-top: 10px;
+}
+.emploee_box .employee_item form .btn button{
+    padding: 15px;
+    background: var(--buttom);border-radius: 3px;
+    color: var(--contrast_color);
+}
+.emploee_box .employee_item form .btn button:hover{
+    background: #0e084f;
+}
+
+/* ------------------emp Record and menu record and order record------------------ */
+table{
+    border-collapse: collapse;
+    font-size: 0.9em;
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: var(--box_shadow);
+}
+table thead tr{
+    background-color: var(--buttom);
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    
+}
+table th, table td{
+    padding: 17px;
+}
+table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+table tbody tr.active-row {
+    font-weight: bold;
+    color: var(--buttom);
+}

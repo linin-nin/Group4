@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Item Id</th>
+                        <th>Titla</th>
+                        <th>Discription</th>
+                        <th>Price</th>
+                        <th>Catergery</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for item in menus %}
+                    <tr>
+                        <td>{{item.item_id}}</td>
+                        <td>{{item.item_name}}</td>
+                        <td>{{item.item_description}}</td>
+                        <td>{{item.item_price}}</td>
+                        <td>{{item.menu_catgery}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href={{url_for('add_order')}}>Create Order</a></li>
+            <li><a href={{url_for('add_menu')}}>add menu</a></li>
+            <li><a href="#">invoice</a></li>
+            <li><a href={{url_for('emp')}}>add employee</a></li>
+            <li><a href={{url_for('menu_record')}} class="active">menu record</a></li>
+            <li><a href={{url_for('emp_record')}}>employee record</a></li>
+            <li><a href="order-record.html">order record</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

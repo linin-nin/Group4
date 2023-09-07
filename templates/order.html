@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="order_box">
+                <div class="box">
+                    <div class="create_order">
+                        <h1>Create Order</h1>
+                    </div>
+                    <form action="">
+                        <div class="input_box">
+                            <label for="">Item Name</label>
+                            <input type="text" name="item_name" placeholder="item-name">
+                        </div>
+<!--                        <div class="input_box">-->
+<!--                            <label for="">Size</label>-->
+<!--                            <input type="text" name="size" placeholder="s/m/l">-->
+<!--                        </div>-->
+                        <div class="input_box">
+                            <label for="">QTY</label>
+                            <input type="text" name="qty" placeholder="Qty">
+                        </div>
+                        <div class="input_box">
+                            <label for="">Sub Price</label>
+                            <input type="text" name="subprice" placeholder="sub-price">
+                        </div>
+                        <div class="input_box">
+                            <label for="">Order Id</label>
+                            <input type="text" name="order_id" placeholder="order-id">
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Create Order</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav>
+        <ul>
+            <li><a href={{url_for('add_order')}} class="active">Create Order</a></li>
+            <li><a href={{url_for('add_menu')}}>add menu</a></li>
+            <li><a href="#">invoice</a></li>
+            <li><a href={{url_for('emp')}}>add employee</a></li>
+            <li><a href={{url_for('menu_record')}}>menu record</a></li>
+            <li><a href={{url_for('emp_record')}}>employee record</a></li>
+            <li><a href="order-record.html">order record</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

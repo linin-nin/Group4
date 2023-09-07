@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="emploee_box">
+                <div class="employee_item">
+                    <h1>Add Employee</h1>
+                    <form action={{url_for('emp')}} method="POST">
+                        <div class="emp_input">
+                            <span>First Name</span>
+                            <input type="text" name="fname" placeholder="First Name">
+                        </div>
+                        <div class="emp_input">
+                            <span>Last Name</span>
+                            <input type="text" name="lname" placeholder="Last Name">
+                        </div>
+                        <div class="emp_input">
+                            <span>Gender</span>
+                            <input type="text" name="gender" placeholder="Female/Male">
+                        </div>
+                        <div class="emp_input">
+                            <span>Position</span>
+                            <input type="text" name="position" placeholder="Position">
+                        </div>
+                        <div class="emp_input">
+                            <span>Address</span>
+                            <input type="text" name="address" placeholder="Address">
+                        </div>
+                        <div class="emp_input">
+                            <span>Contact</span>
+                            <input type="text" name="contact" placeholder="Phone Number">
+                        </div>
+                        <div class="emp_input">
+                            <span>Salary</span>
+                            <input type="text" name="salary" placeholder="Salary">
+                        </div>
+                        <div class="btn">
+                            <button>Add new employee</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ---------fixe-nav abr-------------- -->
+    <nav>
+        <ul>
+            <li><a href={{url_for('add_order')}}>Create Order</a></li>
+            <li><a href={{url_for('add_menu')}} >add menu</a></li>
+            <li><a href="#">invoice</a></li>
+            <li><a href={{url_for('emp')}} class="active">add employee</a></li>
+            <li><a href={{url_for('menu_record')}}>menu record</a></li>
+            <li><a href={{url_for('emp_record')}}>employee record</a></li>
+            <li><a href="order-record.html">order record</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

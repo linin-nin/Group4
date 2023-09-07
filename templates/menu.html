@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="menu_box">
+                <div class="item_box">
+                    <h2>Add Menu</h2>
+                    <form action={{url_for('add_menu')}} method="POST">
+                        <div class="box_input">
+                            <span>Name</span>
+                            <input type="text" name="item_name" placeholder="Menu Name">
+                        </div>
+                        <div class="box_input">
+                            <span>Description</span>
+                            <input type="text" name="item_description" placeholder="Description">
+                        </div>
+                        <div class="box_input">
+                            <span>Price</span>
+                            <input type="text" name="item_price" placeholder="Price">
+                        </div>
+                        <div class="box_input">
+                            <span>Catgery</span>
+                            <input type="text" name="menu_catgery" placeholder="Categery">
+                        </div>
+                        <div class="but"><button>Add Menu</button></div>
+                    </form>
+                </div>
+            </div>
+            <!-- <table>
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name</th>
+                        <th>Discription</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pizaa Hawai</td>
+                        <td>Tra top chesses, port, beef</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Pizaa Hawai</td>
+                        <td>Tra top chesses, port, beef</td>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Pizaa Hawai</td>
+                        <td>Tra top chesses, port, beef</td>
+                    </tr>
+                </tbody>
+            </table> -->
+        </div>
+    </div>
+
+    <!-- ---------fixe-nav abr-------------- -->
+    <nav>
+        <ul>
+            <li><a href={{url_for('add_order')}}>Create Order</a></li>
+            <li><a href={{url_for('add_menu')}} class="active">add menu</a></li>
+            <li><a href="#">invoice</a></li>
+            <li><a href={{url_for('emp')}}>add employee</a></li>
+            <li><a href={{url_for('menu_record')}}>menu record</a></li>
+            <li><a href={{url_for('emp_record')}}>employee record</a></li>
+            <li><a href="order-record.html">order record</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

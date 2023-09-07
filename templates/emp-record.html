@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <table>
+                <thead>
+                    <tr>
+                        <th>emp-id</th>
+                        <th>First name</th>
+                        <th>Last name</th>
+                        <th>Gender</th>
+                        <th>Work Title</th>
+                        <th>Address</th>
+                        <th>Contact</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for emp in employee %}
+                    <tr>
+                        <td>{{emp.emp_id}}</td>
+                        <td>{{emp.fname}}</td>
+                        <td>{{emp.lname}}</td>
+                        <td>{{emp.gender}}</td>
+                        <td>{{emp.position}}</td>
+                        <td>{{emp.address}}</td>
+                        <td>{{emp.contact}}</td>
+                        <td>{{emp.salary}}</td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- ---------fixe-nav abr-------------- -->
+    <nav>
+        <ul>
+            <li><a href="order.html" >Create Order</a></li>
+            <li><a href="menu.html" >add menu</a></li>
+            <li><a href="#">invoice</a></li>
+            <li><a href={{url_for('emp')}}>add employee</a></li>
+            <li><a href={{url_for('menu_record')}}>Menu record</a></li>
+            <li><a href="emp-record.html" class="active">employee record</a></li>
+            <li><a href="order-record.html" >order record</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
